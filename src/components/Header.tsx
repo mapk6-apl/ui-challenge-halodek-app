@@ -31,5 +31,9 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         color: '#F25822', 
         letterSpacing: 0.5
+    },
+    headerIcons:{
+        flexDirection: 'row',
+        gap: 16 //the space between the search and the menu icons
     }
 })
