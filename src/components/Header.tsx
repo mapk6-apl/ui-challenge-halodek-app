@@ -35,5 +35,9 @@ const styles = StyleSheet.create({
     headerIcons:{
         flexDirection: 'row',
         gap: 16 //the space between the search and the menu icons
+    },
+    iconText:{
+        fontSize: 20,
+        color: '#333333'
     }
 })
