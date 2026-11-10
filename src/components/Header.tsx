@@ -25,5 +25,11 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         paddingHorizontal: 20,
         paddingVertical: 12
+    },
+    appTitle: {
+        fontSize: 26,
+        fontWeight: 'bold',
+        color: '#F25822', 
+        letterSpacing: 0.5
     }
 })
