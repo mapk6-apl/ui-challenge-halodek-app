@@ -12,3 +12,7 @@ export interface ChatData {
     isTyping?: string;
     isRead: string;
 }
+
+interface ChatItemProps {
+    item: ChatData;
+}
