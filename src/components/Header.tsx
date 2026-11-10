@@ -16,3 +16,8 @@ export function Header(){
         </View>
     );
 }
+
+// styling the elements; Native doesn't use .css or inline styling
+const styles = StyleSheet.create({
+
+})
