@@ -1,5 +1,6 @@
 import React from 'react'; 
 import { View, Text, StyleSheet } from 'react-native';
+import {Ionicons} from '@expo/vector-icons';
 
 // This is the Header Component to display the app title and icon actions.
 // I will use Flexbox 'row' to align the elements horizontally and justifyContent to plave the app name on the left, and icons to the right
@@ -10,8 +11,10 @@ export function Header(){
             <Text style={styles.appTitle}>HALODEK</Text>
             {/* icons */}
             <View style={styles.headerIcons}>
-                <Text style={styles.iconText}></Text>
-                <Text style={styles.iconText}></Text>
+                {/* Native search icon */}
+                <Ionicons name="search" size={22} color="#333333"/>
+                {/* Native menu/3 dots icons */}
+                <Ionicons name="ellipsis-vertical" size={22} color="#333333"/>
             </View>
         </View>
     );
