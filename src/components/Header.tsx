@@ -19,5 +19,11 @@ export function Header(){
 
 // styling the elements; Native doesn't use .css or inline styling
 const styles = StyleSheet.create({
-
+    topBar:{
+        flexDirection: 'row', 
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        paddingHorizontal: 20,
+        paddingVertical: 12
+    }
 })
