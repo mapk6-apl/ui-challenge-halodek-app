@@ -16,3 +16,7 @@ export interface ChatData {
 interface ChatItemProps {
     item: ChatData;
 }
+
+export function ChatItem({item}: ChatItemProps){
+    
+}
