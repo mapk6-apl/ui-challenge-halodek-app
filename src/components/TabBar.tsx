@@ -53,4 +53,4 @@ const styles = StyleSheet.create({
     activeTabText: {
         color: '#FFFFFF'
     }
-})
+});
