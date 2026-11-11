@@ -28,6 +28,14 @@ export default function App() {
         <Header/>
         {/* tab bar with state selection callback */}
         <TabBar tabs={['Chat', 'Status', 'Calls']} activeTab={activeTab} onSelectTab={(tab) => setActiveTab(tab)}/>
+      
+      <FlatList 
+      data={CHAT_DATA} 
+      keyExtractor={(item) => item.id} 
+      renderItem = {({item}) => <ChatItem item={item}/>}
+      ItemSeparatorComponent={() => <View style={styles.separator}/>}
+      contentContainerStyle={styles.listPadding}
+      shpwsVerticalScrollIndicator={false}/>
       </View>
       </SafeAreaView>
   );
