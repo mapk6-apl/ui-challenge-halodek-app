@@ -48,5 +48,9 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container:{flex:1, backgroundColor: "#FFFFFF"},
-  safeContainer:{flex:1, backgroundColor: "#FFFFFF"}
+  safeContainer:{flex:1, backgroundColor: "#FFFFFF"},
+  listPadding: {
+    paddingHorizontal: 16,
+    paddingBottom: 80
+  }
 });
