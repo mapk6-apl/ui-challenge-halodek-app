@@ -9,8 +9,8 @@ export interface ChatData {
     sender?: string;
     avatar: string;
     unreadCount: number;
-    isTyping?: string;
-    isRead: string;
+    isTyping?: boolean;
+    isRead?: boolean;
 }
 
 interface ChatItemProps {
