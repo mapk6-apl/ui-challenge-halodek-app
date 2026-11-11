@@ -45,4 +45,9 @@ const styles = StyleSheet.create({
     activeTabButton:{
         backgroundColor: '#F25822'
     },
+    tabText: {
+        fontSize: 15,
+        fontWeight: '600',
+        color: '#F25822'
+    }
 })
