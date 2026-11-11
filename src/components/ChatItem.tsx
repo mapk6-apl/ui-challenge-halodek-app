@@ -53,4 +53,10 @@ const styles = StyleSheet.create({
         paddingVertical: 12,
         alignItems: 'center'
     },
+    avatar:{
+        width: 52,
+        height: 52,
+        borderRadius: 26,
+        backgroundColor: '#E1E1E1'
+    },
 })
