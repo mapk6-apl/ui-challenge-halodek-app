@@ -58,4 +58,20 @@ const styles = StyleSheet.create({
     backgroundColor: '#F0F0F0',
     marginLeft: 66
   },
+  fab: {
+    position: 'absolute',
+    bottom: 24,
+    right: 20,
+    width: 60,
+    height: 60,
+    borderRadius: 30,
+    backgroundColor: '#F25822',
+    justifyContent: 'center',
+    alignItems: 'center',
+    elevation: 5,
+    shadowColor: '#000',
+    shadowOffset: {width: 0, height: 4},
+    shadowOpacity: 0.25,
+    shadowRadius: 4,
+  }
 });
