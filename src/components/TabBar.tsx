@@ -42,4 +42,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         borderRadius: 12
     },
+    activeTabButton:{
+        backgroundColor: '#F25822'
+    },
 })
