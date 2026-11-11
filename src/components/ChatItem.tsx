@@ -46,3 +46,11 @@ export function ChatItem({ item }: ChatItemProps) {
         </Pressable>
     );
 }
+
+const styles = StyleSheet.create({
+    chatRow:{
+        flexDirection: 'row',
+        paddingVertical: 12,
+        alignItems: 'center'
+    },
+})
