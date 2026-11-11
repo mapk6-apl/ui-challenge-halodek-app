@@ -18,5 +18,10 @@ interface ChatItemProps {
 }
 
 export function ChatItem({item}: ChatItemProps){
-    
+    return(
+        <Pressable style={styles.chatRow}>
+            {/* profile pic */}
+            <Image source={{uri: item.avatar}} style={styles.avatar}/>
+        </Pressable>
+    )
 }
