@@ -68,5 +68,10 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         alignItems: 'center',
         marginBottom: 4
+    },
+    contactName:{
+        fontSize: 16,
+        fontWeight: 'bold',
+        color: '#1A1A1A'
     }
 })
