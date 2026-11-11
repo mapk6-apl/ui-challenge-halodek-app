@@ -52,5 +52,10 @@ const styles = StyleSheet.create({
   listPadding: {
     paddingHorizontal: 16,
     paddingBottom: 80
-  }
+  },
+  separator:{
+    height: 1,
+    backgroundColor: '#F0F0F0',
+    marginLeft: 66
+  },
 });
