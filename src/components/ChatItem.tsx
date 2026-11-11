@@ -100,5 +100,10 @@ const styles = StyleSheet.create({
         height: 20,
         justifyContent: 'space-between' ,
         alignItems: 'center'
+    },
+    unreadText:{
+        color: '#FFFFFF',
+        fontSize: 11,
+        fontWeight: 'bold'
     }
-})
+});
