@@ -77,5 +77,10 @@ const styles = StyleSheet.create({
     timeText: {
         fontSize: 12,
         color: '#8E8e93'
+    },
+    chatSubHeader:{
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems:'center'
     }
 })
