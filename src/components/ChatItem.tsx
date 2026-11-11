@@ -88,5 +88,9 @@ const styles = StyleSheet.create({
         fontSize: 14,
         color: '#757575',
         marginRight: 8
+    },
+    typingText:{
+        color: '#F25822',
+        fontWeight:'600'
     }
 })
