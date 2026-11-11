@@ -19,7 +19,7 @@ export function TabBar({tabs, activeTab, onSelectTab}: TabBarProps){
                 return(
                     <Pressable key={tab} onPress={() => onSelectTab(tab)}
                     style={[styles.tabButton, isActive && styles.activeTabButton]}>
-                        <Text style={[styles.tabText, isActive && styles.activeTabButton]}>{tab}</Text>
+                        <Text style={[styles.tabText, isActive && {color: '#FFFFFF'}]}>{tab}</Text>
                     </Pressable>
                 );
             })}
@@ -49,8 +49,5 @@ const styles = StyleSheet.create({
         fontSize: 15,
         fontWeight: '600',
         color: '#F25822'
-    },
-    activeTabText: {
-        color: '#FFFFFF'
     }
 });
