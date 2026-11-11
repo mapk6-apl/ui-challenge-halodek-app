@@ -73,5 +73,9 @@ const styles = StyleSheet.create({
         fontSize: 16,
         fontWeight: 'bold',
         color: '#1A1A1A'
+    },
+    timeText: {
+        fontSize: 12,
+        color: '#8E8e93'
     }
 })
