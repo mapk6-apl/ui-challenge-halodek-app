@@ -26,3 +26,14 @@ export function TabBar({tabs, activeTab, onSelectTab}: TabBarProps){
         </View>
     );
 }
+
+const styles = StyleSheet.create({
+    tabContainer: {
+        flexDirection: 'row',
+        backgroundColor: '#FDF1EB',
+        borderRadius: 16,
+        marginHorizontal: 16,
+        marginVertical: 8,
+        padding: 4
+    },
+})
