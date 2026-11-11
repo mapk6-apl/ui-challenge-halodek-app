@@ -4,8 +4,10 @@ import {SafeAreaView} from 'react-native-safe-area-context'
 import {StatusBar} from 'expo-status-bar'
 import {Header} from '../components/Header'
 import {TabBar} from '../components/TabBar'
+import {useState} from 'react'
 
 export default function App() {
+  const [activeTab, setActiveTab] = useState<string>('Chat');
   return (
     <SafeAreaView style={styles.safeContainer}>
       <StatusBar style="dark"/>
