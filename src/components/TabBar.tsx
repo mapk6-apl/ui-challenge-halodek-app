@@ -36,4 +36,10 @@ const styles = StyleSheet.create({
         marginVertical: 8,
         padding: 4
     },
+    tabButton: {
+        flex: 1, //each tab button takes 1/3 of bar width
+        paddingVertical: 10,
+        alignItems: 'center',
+        borderRadius: 12
+    },
 })
