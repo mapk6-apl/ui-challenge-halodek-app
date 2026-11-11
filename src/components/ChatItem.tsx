@@ -59,4 +59,8 @@ const styles = StyleSheet.create({
         borderRadius: 26,
         backgroundColor: '#E1E1E1'
     },
+    chatContent: {
+        flex: 1,
+        marginLeft: 14
+    },
 })
