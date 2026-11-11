@@ -92,5 +92,13 @@ const styles = StyleSheet.create({
     typingText:{
         color: '#F25822',
         fontWeight:'600'
+    },
+    unreadBadge:{
+        backgroundColor: '#F25822',
+        borderRadius: 10,
+        width: 20,
+        height: 20,
+        justifyContent: 'space-between' ,
+        alignItems: 'center'
     }
 })
