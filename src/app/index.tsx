@@ -36,6 +36,11 @@ export default function App() {
       ItemSeparatorComponent={() => <View style={styles.separator}/>}
       contentContainerStyle={styles.listPadding}
       shpwsVerticalScrollIndicator={false}/>
+
+      {/* the Add action button */}
+      <Pressable style={styles.fab}>
+        <Ionicons name="add" size={32} color="FFFFFF"/>
+      </Pressable>
       </View>
       </SafeAreaView>
   );
