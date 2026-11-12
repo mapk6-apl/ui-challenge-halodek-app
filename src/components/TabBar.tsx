@@ -42,11 +42,11 @@ const styles = StyleSheet.create({
         borderRadius: 12
     },
     activeTabButton:{
-        backgroundColor: '#F25822'
+        backgroundColor: '#F86320'
     },
     tabText: {
         fontSize: 15,
         fontWeight: '600',
-        color: '#F25822'
+        color: '#F86320'
     }
 });

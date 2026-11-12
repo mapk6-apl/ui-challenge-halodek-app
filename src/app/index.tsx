@@ -8,14 +8,14 @@ import { Ionicons } from '@expo/vector-icons';
 import {ChatItem, ChatData} from '../components/ChatItem';
 
 const CHAT_DATA: ChatData[] = [
-  { id: '1', name: 'Faza Dzikrulloh', time: '14.30', message: 'Typing...', isTyping: true, avatar: '', unreadCount: 0 },
-  { id: '2', name: 'Hatypo Studio', time: '14.30', message: 'Can you help me to do with new project...', sender: 'Faza', avatar: '', unreadCount: 2 },
-  { id: '3', name: 'Zhofran A', time: '14.00', message: 'I think we should upgrade the social media...', avatar: '', unreadCount: 2 },
-  { id: '4', name: 'Vito Arvy', time: '13.40', message: "Okay adhit, I'll tell faza about it 👍🏼", avatar: '', unreadCount: 0 },
-  { id: '5', name: 'Raul', time: 'Yesterday', message: 'Thanks Raul! 🙏🏼✨', avatar: '', unreadCount: 0, isRead: true },
-  { id: '6', name: 'Farhan Bagas', time: '29/08/22', message: "Great work farhan! 👍🏼 I'll tell faza about logo...", avatar: '', unreadCount: 0, isRead: true },
-  { id: '7', name: 'Abdull', time: '28/08/22', message: 'Perfecto!🔥 I will check it later', avatar: '', unreadCount: 0, isRead: true },
-  { id: '8', name: 'Ibe hatypo', time: '27/08/22', message: 'nicely done bro!🤙🏻', avatar: '', unreadCount: 0 }
+  { id: '1', name: 'Faza Dzikrulloh', time: '14.30', message: 'Typing...', isTyping: true, avatar: require('../../assets/images/Faza.jpg'), unreadCount: 0 },
+  { id: '2', name: 'Hatypo Studio', time: '14.30', message: 'Can you help me to do with new project...', sender: 'Faza', avatar: require('../../assets/images/Hatypo-studio.jpeg'), unreadCount: 2 },
+  { id: '3', name: 'Zhofran A', time: '14.00', message: 'I think we should upgrade the social media...', avatar: require('../../assets/images/Zhofran.jpg'), unreadCount: 2 },
+  { id: '4', name: 'Vito Arvy', time: '13.40', message: "Okay adhit, I'll tell faza about it 👍🏼", avatar: require('../../assets/images/Vito.jpg'), unreadCount: 0 },
+  { id: '5', name: 'Raul', time: 'Yesterday', message: 'Thanks Raul! 🙏🏼✨', avatar: require('../../assets/images/Raul.jpg'), unreadCount: 0, isRead: true },
+  { id: '6', name: 'Farhan Bagas', time: '29/08/22', message: "Great work farhan! 👍🏼 I'll tell faza about logo...", avatar: require('../../assets/images/Farhan.jpg'), unreadCount: 0, isRead: true },
+  { id: '7', name: 'Abdull', time: '28/08/22', message: 'Perfecto!🔥 I will check it later', avatar: require('../../assets/images/Abdull.jpg'), unreadCount: 0, isRead: true },
+  { id: '8', name: 'Ibe hatypo', time: '27/08/22', message: 'nicely done bro!🤙🏻', avatar: require('../../assets/images/Ibe.jpg'), unreadCount: 0 }
 
 ]
 
@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
     width: 60,
     height: 60,
     borderRadius: 30,
-    backgroundColor: '#F25822',
+    backgroundColor: '#F86320',
     justifyContent: 'center',
     alignItems: 'center',
     elevation: 5,

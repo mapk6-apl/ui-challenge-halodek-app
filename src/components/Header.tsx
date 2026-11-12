@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
     appTitle: {
         fontSize: 26,
         fontWeight: 'bold',
-        color: '#F25822', 
+        color: '#F86320', 
         letterSpacing: 0.5
     },
     headerIcons:{

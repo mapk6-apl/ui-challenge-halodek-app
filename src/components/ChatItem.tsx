@@ -1,6 +1,5 @@
-import React from 'react';
-import { View, Text, Image, Pressable, StyleSheet } from 'react-native'
-import {Ionicons} from '@expo/vector-icons'; //for the orange ticks
+import { Ionicons } from '@expo/vector-icons'; //for the orange ticks
+import { Image, Pressable, StyleSheet, Text, View, ImageSourcePropType } from 'react-native';
 
 export interface ChatData {
     id: string;
@@ -8,7 +7,7 @@ export interface ChatData {
     time: string;
     message: string;
     sender?: string;
-    avatar: string;
+    avatar: ImageSourcePropType;
     unreadCount: number;
     isTyping?: boolean;
     isRead?: boolean;
@@ -22,7 +21,7 @@ export function ChatItem({ item }: ChatItemProps) {
     return (
         <Pressable style={styles.chatRow}>
             {/* profile pic */}
-            <Image source={{ uri: item.avatar }} style={styles.avatar} />
+            <Image source={item.avatar } style={{width: 50, height: 50, borderRadius: 25}} />
 
             {/* message details */}
             <View style={styles.chatContent}>
@@ -79,11 +78,11 @@ const styles = StyleSheet.create({
     contactName:{
         fontSize: 16,
         fontWeight: 'bold',
-        color: '#1A1A1A'
+        color: '#333333'
     },
     timeText: {
         fontSize: 12,
-        color: '#8E8e93'
+        color: '#333333'
     },
     chatSubHeader:{
         flexDirection: 'row',
@@ -93,15 +92,15 @@ const styles = StyleSheet.create({
     messageText:{
         flex: 1,
         fontSize: 14,
-        color: '#757575',
+        color: '#333333',
         marginRight: 8
     },
     typingText:{
-        color: '#F25822',
+        color: '#F86320',
         fontWeight:'600'
     },
     unreadBadge:{
-        backgroundColor: '#F25822',
+        backgroundColor: '#F86320',
         borderRadius: 10,
         width: 20,
         height: 20,
@@ -110,10 +109,9 @@ const styles = StyleSheet.create({
     },
     unreadText:{
         color: '#FFFFFF',
-        fontSize: 11,
-        fontWeight: 'bold'
+        fontSize: 14,
     },
     senderText:{
-        color: '#F25822'
+        color: '#F86320'
     }
 });
