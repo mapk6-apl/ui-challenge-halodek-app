@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, Image, Pressable, StyleSheet } from 'react-native'
+import {Ionicons} from '@expo/vector-icons'; //for the orange ticks
 
 export interface ChatData {
     id: string;
@@ -32,7 +33,8 @@ export function ChatItem({ item }: ChatItemProps) {
 
                 <View style={styles.chatSubHeader}>
                     <Text style={[styles.messageText, item.isTyping && styles.typingText]} numberOfLines={1}>
-                        {item.sender ? `${item.sender}: ${item.message}` : item.message}
+                        {item.sender && <Text style={styles.senderText}>{`${item.sender} `}</Text>}
+                        {item.message}
                     </Text>
 
                     {/* badge for unread message */}
@@ -40,6 +42,11 @@ export function ChatItem({ item }: ChatItemProps) {
                         <View style={styles.unreadBadge}>
                             <Text style={styles.unreadText}>{item.unreadCount}</Text>
                         </View>
+                    )}
+
+                    {/* double ticks icons for read/seen messages */}
+                    {item.isRead && item.unreadCount === 0 && (
+                        <Ionicons name="checkmark-done" size={18} color="#F25822"/>
                     )}
                 </View>
             </View>
@@ -105,5 +112,8 @@ const styles = StyleSheet.create({
         color: '#FFFFFF',
         fontSize: 11,
         fontWeight: 'bold'
+    },
+    senderText:{
+        color: '#F25822'
     }
 });
