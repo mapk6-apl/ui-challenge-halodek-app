@@ -1,9 +1,18 @@
 import { View, Text, StyleSheet } from 'react-native';
 import {Ionicons} from '@expo/vector-icons';
+import React, {useState} from 'react'
+
+interface HeaderProps{
+    searchQuery: string;
+    onSearchChange: (text: string) => void;
+    isSearching: boolean;
+    onToggleSearch: () => void;
+}
 
 // This is the Header Component to display the app title and icon actions.
 // I will use Flexbox 'row' to align the elements horizontally and justifyContent to plave the app name on the left, and icons to the right
-export function Header(){
+export function Header({searchQuery, onSearchChange, isSearching, onToggleSearch}: HeaderProps){
+    const [isMenuVisible, setIsMenuVisible] = useState(false);
     return(
         <View style={styles.topBar}>
             {/* App Name */}
