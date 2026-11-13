@@ -41,10 +41,27 @@ export function Header({ searchQuery, onSearchChange, isSearching, onToggleSearc
                             <Ionicons name="ellipsis-vertical" size={22} color="#333333" />
                         </Pressable>
                     </View>
-                    )
+                    )}
 
-
-
+                    {/* popup modal for menu button (3 dots) */}
+                    <Modal visible={isMenuVisible} transparent animationType="fade" onRequestClose={() => setIsMenuVisible(false)}>
+                        <Pressable style={styles.menuOverlay} onPress={() => setIsMenuVisible(false)}>
+                            <View style={styles.menuCard}>
+                                <Pressable style={styles.menuItem} onPress={() => setIsMenuVisible(false)}>
+                                    <Text style={styles.menuText}>New Group</Text>
+                                </Pressable>
+                                <Pressable style={styles.menuItem} onPress={() => setIsMenuVisible(false)}>
+                                    <Text style={styles.menuText}>New Broadcast</Text>
+                                </Pressable>
+                                <Pressable style={styles.menuItem} onPress={() => setIsMenuVisible(false)}>
+                                    <Text style={styles.menuText}>Starred Messages</Text>
+                                </Pressable>
+                                <Pressable style={styles.menuItem} onPress={() => setIsMenuVisible(false)}>
+                                    <Text style={styles.menuText}>Settings</Text>
+                                </Pressable>
+                            </View>
+                        </Pressable>
+                    </Modal>
                 </View>
             );
 }
@@ -71,5 +88,18 @@ export function Header({ searchQuery, onSearchChange, isSearching, onToggleSearc
             iconText:{
                 fontSize: 20,
             color: '#333333'
-    }
+    },
+    searchContainer:{
+        flex:1,
+        flexDirection: 'row',
+        alignItems: 'center',
+        backgroundColor: '#F5F5F5',
+        borderRadius: 20,
+paddingHorizontal: 12,
+height: 40
+    },
+    searchIcon:{
+        marginRight: 8
+    },
+    
 })
