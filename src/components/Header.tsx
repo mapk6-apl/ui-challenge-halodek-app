@@ -102,14 +102,37 @@ const styles = StyleSheet.create({
     searchIcon: {
         marginRight: 8
     },
+    searchInput: {
+        flex: 1,
+        fontSize: 15,
+        color: '#333333'
+    },
     menuOverlay
         : {
-            flex: 1,
-            backgroundColor: 'rgba(0,0,0,0.15)',
-            justifyContent: 'flex-start',
-            alignItems: 'flex-end',
-            paddingTop: 50,
-            paddingRight: 20
-        }
-
+        flex: 1,
+        backgroundColor: 'rgba(0,0,0,0.15)',
+        justifyContent: 'flex-start',
+        alignItems: 'flex-end',
+        paddingTop: 50,
+        paddingRight: 20
+    },
+    menuCard: {
+        backgroundColor: '#FFFFFF',
+        borderRadius: 12,
+        paddingVertical: 8,
+        width: 180,
+        elevation: 8,
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 4 },
+        shadowOpacity: 0.2,
+        shadowRadius: 6
+    },
+    menuItem: {
+        paddingVertical: 12,
+        paddingHorizontal: 16
+    },
+    menuText: {
+        fontSize: 15,
+        color: '#333333',
+    }
 });
