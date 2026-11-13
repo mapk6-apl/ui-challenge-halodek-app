@@ -18,11 +18,13 @@ interface ChatItemProps {
     onPressAvatar: (item: ChatData) => void;
 }
 
-export function ChatItem({ item }: ChatItemProps) {
+export function ChatItem({ item, onPressAvatar }: ChatItemProps) {
     return (
         <Pressable style={styles.chatRow}>
             {/* profile pic */}
-            <Image source={item.avatar } style={{width: 50, height: 50, borderRadius: 25}} />
+            <Pressable onPress={() => onPressAvatar(item)} hitSlop={6}>
+                <Image source={item.avatar} style={{ width: 50, height: 50, borderRadius: 25 }} />
+            </Pressable>
 
             {/* message details */}
             <View style={styles.chatContent}>
@@ -46,7 +48,7 @@ export function ChatItem({ item }: ChatItemProps) {
 
                     {/* double ticks icons for read/seen messages */}
                     {item.isRead && item.unreadCount === 0 && (
-                        <Ionicons name="checkmark-done" size={18} color="#F25822"/>
+                        <Ionicons name="checkmark-done" size={18} color="#F25822" />
                     )}
                 </View>
             </View>
@@ -55,12 +57,12 @@ export function ChatItem({ item }: ChatItemProps) {
 }
 
 const styles = StyleSheet.create({
-    chatRow:{
+    chatRow: {
         flexDirection: 'row',
         paddingVertical: 12,
         alignItems: 'center'
     },
-    avatar:{
+    avatar: {
         width: 52,
         height: 52,
         borderRadius: 26,
@@ -70,13 +72,13 @@ const styles = StyleSheet.create({
         flex: 1,
         marginLeft: 14
     },
-    chatHeader:{
+    chatHeader: {
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
         marginBottom: 4
     },
-    contactName:{
+    contactName: {
         fontSize: 16,
         fontWeight: 'bold',
         color: '#333333'
@@ -85,34 +87,34 @@ const styles = StyleSheet.create({
         fontSize: 12,
         color: '#333333'
     },
-    chatSubHeader:{
+    chatSubHeader: {
         flexDirection: 'row',
         justifyContent: 'space-between',
-        alignItems:'center'
+        alignItems: 'center'
     },
-    messageText:{
+    messageText: {
         flex: 1,
         fontSize: 14,
         color: '#333333',
         marginRight: 8
     },
-    typingText:{
+    typingText: {
         color: '#F86320',
-        fontWeight:'600'
+        fontWeight: '600'
     },
-    unreadBadge:{
+    unreadBadge: {
         backgroundColor: '#F86320',
         borderRadius: 10,
         width: 20,
         height: 20,
-        justifyContent: 'space-between' ,
+        justifyContent: 'space-between',
         alignItems: 'center'
     },
-    unreadText:{
+    unreadText: {
         color: '#FFFFFF',
         fontSize: 14,
     },
-    senderText:{
+    senderText: {
         color: '#F86320'
     }
 });
