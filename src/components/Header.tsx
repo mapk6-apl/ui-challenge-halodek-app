@@ -14,6 +14,14 @@ interface HeaderProps {
 export function Header({ searchQuery, onSearchChange, isSearching, onToggleSearch }: HeaderProps) {
     const [isMenuVisible, setIsMenuVisible] = useState(false);
 
+    // for the menu button actions; 300ms delay when option is pressed so we see hover color; then menu closes
+const handleMenuItemPress = (actionName: string) => {
+    console.log(`${actionName} pressed`);
+    setTimeout(() => {
+        setIsMenuVisible(false);
+    }, 300); //0.3 seconds delay
+};
+
     return (
         <View style={styles.topBar}>
             {isSearching ? (
@@ -62,6 +70,7 @@ export function Header({ searchQuery, onSearchChange, isSearching, onToggleSearc
                         </Pressable>
                     </View>
                 </Pressable>
+                style={({ pressed }) => [styles.menuItem, pressed && styles.menuItemPressed]} onPress={() => console.log('Chat pressed')
             </Modal>
         </View>
     );
