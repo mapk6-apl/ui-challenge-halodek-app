@@ -41,65 +41,75 @@ export function Header({ searchQuery, onSearchChange, isSearching, onToggleSearc
                             <Ionicons name="ellipsis-vertical" size={22} color="#333333" />
                         </Pressable>
                     </View>
-                    )}
+                </>
+            )}
 
-                    {/* popup modal for menu button (3 dots) */}
-                    <Modal visible={isMenuVisible} transparent animationType="fade" onRequestClose={() => setIsMenuVisible(false)}>
-                        <Pressable style={styles.menuOverlay} onPress={() => setIsMenuVisible(false)}>
-                            <View style={styles.menuCard}>
-                                <Pressable style={styles.menuItem} onPress={() => setIsMenuVisible(false)}>
-                                    <Text style={styles.menuText}>New Group</Text>
-                                </Pressable>
-                                <Pressable style={styles.menuItem} onPress={() => setIsMenuVisible(false)}>
-                                    <Text style={styles.menuText}>New Broadcast</Text>
-                                </Pressable>
-                                <Pressable style={styles.menuItem} onPress={() => setIsMenuVisible(false)}>
-                                    <Text style={styles.menuText}>Starred Messages</Text>
-                                </Pressable>
-                                <Pressable style={styles.menuItem} onPress={() => setIsMenuVisible(false)}>
-                                    <Text style={styles.menuText}>Settings</Text>
-                                </Pressable>
-                            </View>
+            {/* popup modal for menu button (3 dots) */}
+            <Modal visible={isMenuVisible} transparent animationType="fade" onRequestClose={() => setIsMenuVisible(false)}>
+                <Pressable style={styles.menuOverlay} onPress={() => setIsMenuVisible(false)}>
+                    <View style={styles.menuCard}>
+                        <Pressable style={styles.menuItem} onPress={() => setIsMenuVisible(false)}>
+                            <Text style={styles.menuText}>New Group</Text>
                         </Pressable>
-                    </Modal>
-                </View>
-            );
+                        <Pressable style={styles.menuItem} onPress={() => setIsMenuVisible(false)}>
+                            <Text style={styles.menuText}>New Broadcast</Text>
+                        </Pressable>
+                        <Pressable style={styles.menuItem} onPress={() => setIsMenuVisible(false)}>
+                            <Text style={styles.menuText}>Starred Messages</Text>
+                        </Pressable>
+                        <Pressable style={styles.menuItem} onPress={() => setIsMenuVisible(false)}>
+                            <Text style={styles.menuText}>Settings</Text>
+                        </Pressable>
+                    </View>
+                </Pressable>
+            </Modal>
+        </View>
+    );
 }
 
-            // styling the elements; Native doesn't use .css or inline styling
-            const styles = StyleSheet.create({
-                topBar:{
-                flexDirection: 'row',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-            paddingHorizontal: 20,
-            paddingVertical: 12
+// styling the elements; Native doesn't use .css or inline styling
+const styles = StyleSheet.create({
+    topBar: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        paddingHorizontal: 20,
+        paddingVertical: 12
     },
-            appTitle: {
-                fontSize: 26,
-            fontWeight: 'bold',
-            color: '#F86320',
-            letterSpacing: 0.5
+    appTitle: {
+        fontSize: 26,
+        fontWeight: 'bold',
+        color: '#F86320',
+        letterSpacing: 0.5
     },
-            headerIcons:{
-                flexDirection: 'row',
-            gap: 16 //the space between the search and the menu icons
+    headerIcons: {
+        flexDirection: 'row',
+        gap: 16 //the space between the search and the menu icons
     },
-            iconText:{
-                fontSize: 20,
-            color: '#333333'
+    iconText: {
+        fontSize: 20,
+        color: '#333333'
     },
-    searchContainer:{
-        flex:1,
+    searchContainer: {
+        flex: 1,
         flexDirection: 'row',
         alignItems: 'center',
         backgroundColor: '#F5F5F5',
         borderRadius: 20,
-paddingHorizontal: 12,
-height: 40
+        paddingHorizontal: 12,
+        height: 40
     },
-    searchIcon:{
+    searchIcon: {
         marginRight: 8
     },
-    
-})
+    menuOverlay
+        : {
+            flex: 1,
+            backgroundColor: 'rgba(0,0,0,0.15)',
+            justifyContent: 'flex-start',
+            alignItems: 'flex-end',
+            paddingTop: 50,
+            paddingRight: 20
+        }
+
+});
