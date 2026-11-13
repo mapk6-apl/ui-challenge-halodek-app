@@ -20,7 +20,7 @@ export function Header({ searchQuery, onSearchChange, isSearching, onToggleSearc
                 // interactive search bar
                 <View style={styles.searchContainer}>
                     <Ionicons name="search" size={22} color="#333333" style={styles.searchIcon} />
-                    <TextInput styles={styles.searchInput} placeholder="Search chats..." placeholderTextColor="#8E8E93" value={searchQuery} onChangeText={onSearchChange} autoFocus />
+                    <TextInput style={styles.searchInput} placeholder="Search chats..." placeholderTextColor="#8E8E93" value={searchQuery} onChangeText={onSearchChange} autoFocus />
                     {/* the hitslop is the additional distance outside of this view in which a press is detected */}
                     <Pressable onPress={onToggleSearch} hitSlop={10}>
                         <Ionicons name="close" size={24} color="#333333" />

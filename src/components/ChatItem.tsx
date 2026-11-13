@@ -15,6 +15,7 @@ export interface ChatData {
 
 interface ChatItemProps {
     item: ChatData;
+    onPressAvatar: (item: ChatData) => void;
 }
 
 export function ChatItem({ item }: ChatItemProps) {
