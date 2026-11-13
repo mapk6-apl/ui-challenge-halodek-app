@@ -45,23 +45,23 @@ export default function App() {
               setSearchQuery('');
           }} />
         {/* tab bar with state selection callback */}
-        <TabBar tabs={['Chat', 'Status', 'Calls']} 
-        activeTab={activeTab} 
-        onSelectTab={(tab) => setActiveTab(tab)} />
+        <TabBar tabs={['Chat', 'Status', 'Calls']}
+          activeTab={activeTab}
+          onSelectTab={(tab) => setActiveTab(tab)} />
 
-{/* filtered chat list */}
+        {/* filtered chat list */}
         <FlatList
           data={filteredChats}
           keyExtractor={(item) => item.id}
-          renderItem={({ item }) => (<ChatItem item={item} onPressAvatar={(user) => setSelectedUser(user)}/>)}
+          renderItem={({ item }) => (<ChatItem item={item} onPressAvatar={(user) => setSelectedUser(user)} />)}
           ItemSeparatorComponent={() => <View style={styles.separator} />}
           contentContainerStyle={styles.listPadding}
-          showsVerticalScrollIndicator={false} 
+          showsVerticalScrollIndicator={false}
           ListEmptyComponent={
             <View style={styles.emptyContainer}>
-            <Text style={styles.emptyText}>No chats found for "{searchQuery}"</Text>
+              <Text style={styles.emptyText}>No chats found for "{searchQuery}"</Text>
             </View>
-          }/>
+          } />
 
         {/* the Add action button; FAB-floating action button */}
         <Pressable style={styles.fab}>
@@ -82,19 +82,19 @@ export default function App() {
 
               {/* Quick Action Icons */}
               <View style={styles.cardActions}>
-                <Pressable style={styles.actionBtn} onPress={() => setSelectedUser(null)}>
+                <Pressable style={({ pressed }) => [styles.actionBtn, pressed && styles.actionBtnPressed]} onPress={() => console.log('Chat pressed')}>
                   <Ionicons name="chatbubble-ellipses" size={22} color="#F25822" />
                 </Pressable>
-                <Pressable style={styles.actionBtn} onPress={() => setSelectedUser(null)}>
+                <Pressable style={({ pressed }) => [styles.actionBtn, pressed && styles.actionBtnPressed]} onPress={() => console.log('Call pressed')}>
                   <Ionicons name="call" size={22} color="#F25822" />
                 </Pressable>
-                <Pressable style={styles.actionBtn} onPress={() => setSelectedUser(null)}>
+                <Pressable style={({ pressed }) => [styles.actionBtn, pressed && styles.actionBtnPressed]} onPress={() => console.log('Info pressed')}>
                   <Ionicons name="information-circle" size={22} color="#F25822" />
                 </Pressable>
-                </View>
-                </Pressable>
+              </View>
+            </Pressable>
           </Pressable>
-          </Modal> 
+        </Modal>
       </View>
     </SafeAreaView>
   );
@@ -127,50 +127,68 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.25,
     shadowRadius: 4,
-  }, emptyContainer: { 
-    paddingTop: 40, 
+  },
+  emptyContainer: {
+    paddingTop: 40,
     alignItems: 'center'
-  }, emptyText: { 
-    fontSize: 14, 
+  },
+  emptyText: {
+    fontSize: 14,
     color: '#8E8E93'
-  }, modalOverlay: { 
-    flex: 1, 
-    backgroundColor: 'rgba(0,0,0,0.5)', 
-    justifyContent: 'center', 
-    alignItems: 'center' 
-  }, avatarCard: { 
-    width: 260, 
+  },
+  modalOverlay: {
+    flex: 1,
+    backgroundColor: 'rgba(0,0,0,0.5)',
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  avatarCard: {
+    width: 260,
     backgroundColor: '#FFFFFF',
-     borderRadius: 16, 
-     overflow: 'hidden', 
-     alignItems: 'center', 
-     elevation: 10, 
-     shadowColor: '#000', 
-     shadowOffset: { 
-      width: 0, 
-      height: 5 
-    }, shadowOpacity: 0.3, 
+    borderRadius: 16,
+    overflow: 'hidden',
+    alignItems: 'center',
+    elevation: 10,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 5
+    }, shadowOpacity: 0.3,
     shadowRadius: 10
-  }, cardHeader: { 
-    width: '100%', 
-    paddingVertical: 10, 
-    paddingHorizontal: 14, 
+  },
+  cardHeader: {
+    width: '100%',
+    paddingVertical: 10,
+    paddingHorizontal: 14,
     backgroundColor: 'rgba(0,0,0,0.03)'
-  }, cardTitle: { 
-    fontSize: 16, 
-    fontWeight: '600', 
+  },
+  cardTitle: {
+    fontSize: 16,
+    fontWeight: '600',
     color: '#1A1A1A'
-  }, largeAvatar: { 
-    width: 260, 
-    height: 260, 
+  },
+  largeAvatar: {
+    width: 260,
+    height: 260,
     resizeMode: 'cover'
-  }, cardActions: { 
-    flexDirection: 'row', 
-    width: '100%', 
-    justifyContent: 'space-around', 
-    paddingVertical: 12, 
+  },
+  cardActions: {
+    flexDirection: 'row',
+    width: '100%',
+    justifyContent: 'space-around',
+    paddingVertical: 12,
     backgroundColor: '#FFFFFF'
-  }, actionBtn: { 
-    padding: 8
+  },
+  actionBtn: {
+    padding: 8,
+    width: 44,
+    height: 44,
+    borderRadius: 22,
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  actionBtnPressed: {
+    backgroundColor: '#F1CFBD',
+    opacity: 0.8
   }
 });
