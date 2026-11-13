@@ -15,12 +15,12 @@ export function Header({ searchQuery, onSearchChange, isSearching, onToggleSearc
     const [isMenuVisible, setIsMenuVisible] = useState(false);
 
     // for the menu button actions; 300ms delay when option is pressed so we see hover color; then menu closes
-const handleMenuItemPress = (actionName: string) => {
-    console.log(`${actionName} pressed`);
-    setTimeout(() => {
-        setIsMenuVisible(false);
-    }, 300); //0.3 seconds delay
-};
+    const handleMenuItemPress = (actionName: string) => {
+        console.log(`${actionName} pressed`);
+        setTimeout(() => {
+            setIsMenuVisible(false);
+        }, 300); //0.3 seconds delay
+    };
 
     return (
         <View style={styles.topBar}>
@@ -56,21 +56,20 @@ const handleMenuItemPress = (actionName: string) => {
             <Modal visible={isMenuVisible} transparent animationType="fade" onRequestClose={() => setIsMenuVisible(false)}>
                 <Pressable style={styles.menuOverlay} onPress={() => setIsMenuVisible(false)}>
                     <View style={styles.menuCard}>
-                        <Pressable style={styles.menuItem} onPress={() => setIsMenuVisible(false)}>
+                        <Pressable style={({ pressed }) => [styles.menuItem, pressed && styles.menuItemPressed]} onPress={() => handleMenuItemPress('New Group')}>
                             <Text style={styles.menuText}>New Group</Text>
                         </Pressable>
-                        <Pressable style={styles.menuItem} onPress={() => setIsMenuVisible(false)}>
+                        <Pressable style={({ pressed }) => [styles.menuItem, pressed && styles.menuItemPressed]} onPress={() => handleMenuItemPress('New Broadcast')}>
                             <Text style={styles.menuText}>New Broadcast</Text>
                         </Pressable>
-                        <Pressable style={styles.menuItem} onPress={() => setIsMenuVisible(false)}>
+                        <Pressable style={({ pressed }) => [styles.menuItem, pressed && styles.menuItemPressed]} onPress={() => handleMenuItemPress('Starred Messages')}>
                             <Text style={styles.menuText}>Starred Messages</Text>
                         </Pressable>
-                        <Pressable style={styles.menuItem} onPress={() => setIsMenuVisible(false)}>
+                        <Pressable style={({ pressed }) => [styles.menuItem, pressed && styles.menuItemPressed]} onPress={() => handleMenuItemPress('Settings')}>
                             <Text style={styles.menuText}>Settings</Text>
                         </Pressable>
                     </View>
                 </Pressable>
-                style={({ pressed }) => [styles.menuItem, pressed && styles.menuItemPressed]} onPress={() => console.log('Chat pressed')
             </Modal>
         </View>
     );
@@ -138,10 +137,14 @@ const styles = StyleSheet.create({
     },
     menuItem: {
         paddingVertical: 12,
-        paddingHorizontal: 16
+        paddingHorizontal: 16,
+        borderRadius: 8
     },
     menuText: {
         fontSize: 15,
         color: '#333333',
+    },
+    menuItemPressed: {
+        backgroundColor: '#F1CFBD'
     }
 });
