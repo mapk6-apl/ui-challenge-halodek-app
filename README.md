@@ -14,14 +14,20 @@ A React Native messaging application UI built with Expo and TypeScript. Halodek 
 
 ## 📸 App Screenshots
 
-<img width="828" height="1792" alt="IMG_6632" src="https://github.com/user-attachments/assets/1fa9f7e3-9772-499d-a5c6-484a42506c95" />
-<img width="828" height="1792" alt="IMG_6633" src="https://github.com/user-attachments/assets/1c0d1f96-57e2-4d6b-b6ae-c5ef0508bc64" />
-<img width="828" height="1792" alt="IMG_6635" src="https://github.com/user-attachments/assets/559ea9f5-fe75-4710-b3ee-4b5b4913d737" />
-<img width="828" height="1792" alt="IMG_6636" src="https://github.com/user-attachments/assets/6ab89898-01d3-457f-b635-3266ca5c1d63" />
-<img width="828" height="1792" alt="IMG_6638" src="https://github.com/user-attachments/assets/0dfff6e8-1fc0-4b72-a8b2-4e430b3961c9" />
-<img width="828" height="1792" alt="IMG_6639" src="https://github.com/user-attachments/assets/459ff87f-c9d7-4a24-9f83-c48756242880" />
-<img width="828" height="1792" alt="IMG_6640" src="https://github.com/user-attachments/assets/ff424354-f969-4b13-9cbf-9519843c9fff" />
-<img width="828" height="1792" alt="IMG_6641" src="https://github.com/user-attachments/assets/b4f2a913-6a7c-4e7f-a9b0-568dd08d8188" />
+<table>
+  <tr>
+    <td align="center"><img src="https://github.com/user-attachments/assets/1fa9f7e3-9772-499d-a5c6-484a42506c95" width="200" alt="HaloDek Screenshot 1"/></td>
+    <td align="center"><img src="https://github.com/user-attachments/assets/1c0d1f96-57e2-4d6b-b6ae-c5ef0508bc64" width="200" alt="HaloDek Screenshot 2"/></td>
+    <td align="center"><img src="https://github.com/user-attachments/assets/559ea9f5-fe75-4710-b3ee-4b5b4913d737" width="200" alt="HaloDek Screenshot 3"/></td>
+    <td align="center"><img src="https://github.com/user-attachments/assets/6ab89898-01d3-457f-b635-3266ca5c1d63" width="200" alt="HaloDek Screenshot 4"/></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="https://github.com/user-attachments/assets/0dfff6e8-1fc0-4b72-a8b2-4e430b3961c9" width="200" alt="HaloDek Screenshot 5"/></td>
+    <td align="center"><img src="https://github.com/user-attachments/assets/459ff87f-c9d7-4a24-9f83-c48756242880" width="200" alt="HaloDek Screenshot 6"/></td>
+    <td align="center"><img src="https://github.com/user-attachments/assets/ff424354-f969-4b13-9cbf-9519843c9fff" width="200" alt="HaloDek Screenshot 7"/></td>
+    <td align="center"><img src="https://github.com/user-attachments/assets/b4f2a913-6a7c-4e7f-a9b0-568dd08d8188" width="200" alt="HaloDek Screenshot 8"/></td>
+  </tr>
+</table>
 
 ---
 
